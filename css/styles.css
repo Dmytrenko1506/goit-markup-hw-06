@@ -16,6 +16,7 @@ body {
   color: var(--primery-text-color);
   font-size: 14px;
   letter-spacing: 0.03em;
+  
 }
 
 h1,
@@ -364,6 +365,7 @@ img {
   border-radius: 4px;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .form-input:focus,
 .form-input:hover {
@@ -390,23 +392,44 @@ img {
   transform: translateY(-50%);
   fill: var(--title-text-color);
   
-  
 }
+
 .agree {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 448px;
   margin-bottom: 30px;
-}
-.agree label {
-margin-left: 8.5px;
 }
 
 .agree-link {
   color: var(--accent-color);
 }
+.check-lable {
+position: relative;
+ 
+  line-height: 1.71;
+}
+.checkbox {
+  appearance: none;
+}
+.checkbox:checked + .check {
+  fill: var(--accent-color);
+  border: none;
+}
+
+.check {
+  position: absolute;
+  left: -23px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  fill: transparent;
+}
 
 .modal-title {
-  
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
@@ -722,8 +745,7 @@ margin-left: 8.5px;
 /* -- SENDING-- */
 
 .sending {
-  margin-left: 93px;
-  /* width: 570px; */
+  margin-left: auto;
 }
 
 .btn-subscribe {
@@ -862,6 +884,7 @@ margin-left: 8.5px;
   position: relative;
   overflow: hidden;
 }
+/* --OVERLAY-- */
 .overlay {
   position: absolute;
   width: 100%;
@@ -871,10 +894,10 @@ margin-left: 8.5px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .overlay-text {
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    color:var(--white-color);
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color:var(--white-color);
     
 }
 .project-link:hover .overlay,
